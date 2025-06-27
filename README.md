@@ -1,5 +1,7 @@
 # World Heritage UI
 
+A "World Heritage" App generated using Claude Sonnet 4.
+
 ## Model
 
 Claude Sonnet 4
