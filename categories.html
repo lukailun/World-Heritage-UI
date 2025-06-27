@@ -165,6 +165,30 @@
     </div>
 
     <script>
+        let pageI18n;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            pageI18n = new SharedI18n();
+        });
+        
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'DARK_MODE_CHANGE') {
+                const html = document.documentElement;
+                if (event.data.isDarkMode) {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
+            
+            if (event.data.type === 'LANGUAGE_CHANGE') {
+                if (pageI18n) {
+                    pageI18n.currentLang = event.data.language;
+                    pageI18n.updateLanguage();
+                }
+            }
+        });
+        
         lucide.createIcons();
     </script>
 </body>
