@@ -4,10 +4,14 @@ A "World Heritage" App design draft generated using Claude Sonnet 4, with prompt
 
 English | [简体中文](./README-zh.md)
 
-## Preview
+## 🌐 Live Demo
+
+**[👉 View Live Demo on GitHub Pages](https://yourusername.github.io/World-Heritage-UI)**
+
+## 📱 Preview
 
 <div align="center">
-  <img src="./screenshots/en.png" alt="en">
+  <img src="./screenshots/en.png" alt="English Version">
 </div>
 
 ## Model
