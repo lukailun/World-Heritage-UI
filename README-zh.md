@@ -8,7 +8,7 @@
 
 **[👉 在 GitHub Pages 上查看在线演示](https://lukailun.github.io/World-Heritage-UI)**
 
-## 预览
+## 📱 预览
 
 <div align="center">
   <img src="./screenshots/zh.png" alt="en">
