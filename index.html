@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
+            background: white;
             min-height: 100vh;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
@@ -14,100 +15,127 @@
             transform: scale(0.8);
             transform-origin: center;
         }
+        
+        @media (max-width: 768px) {
+            .phone-frame {
+                transform: scale(0.45);
+                transform-origin: center;
+            }
+            
+            .phone-frame iframe {
+                pointer-events: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .phone-frame {
+                transform: scale(0.35);
+                transform-origin: center;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .grid-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
-<body class="p-8">
+<body class="p-4 sm:p-8">
     <div class="max-w-7xl mx-auto">
         <!-- Header -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">World Heritage App</h1>
-            <p class="text-gray-600 text-lg">Elegant minimalist design for UNESCO World Heritage exploration</p>
-            <div class="flex justify-center items-center mt-6 space-x-6 text-gray-600">
+        <div class="text-center mb-8 sm:mb-12">
+            <h1 class="text-2xl sm:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">World Heritage App</h1>
+            <p class="text-gray-600 text-base sm:text-lg px-4">Elegant minimalist design for UNESCO World Heritage exploration</p>
+            <div class="flex flex-wrap justify-center items-center mt-4 sm:mt-6 gap-3 sm:gap-6 text-gray-600 px-4">
                 <div class="flex items-center">
                     <div class="w-3 h-3 bg-purple-400 rounded-full mr-2"></div>
-                    <span class="text-sm">Responsive Design</span>
+                    <span class="text-xs sm:text-sm">Responsive Design</span>
                 </div>
                 <div class="flex items-center">
                     <div class="w-3 h-3 bg-yellow-400 rounded-full mr-2"></div>
-                    <span class="text-sm">Dark Mode Support</span>
+                    <span class="text-xs sm:text-sm">Dark Mode Support</span>
                 </div>
                 <div class="flex items-center">
                     <div class="w-3 h-3 bg-red-400 rounded-full mr-2"></div>
-                    <span class="text-sm">Internationalization</span>
+                    <span class="text-xs sm:text-sm">Internationalization</span>
                 </div>
             </div>
         </div>
 
         <!-- Pages Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <!-- Discovery Page -->
-            <div class="text-center">
+            <div class="text-center grid-item">
                 <div class="phone-frame">
                     <iframe src="discovery.html" 
                             class="w-[393px] h-[852px] border-0 rounded-[2.5rem] shadow-2xl">
                     </iframe>
                 </div>
-                <h3 class="text-gray-800 font-semibold mt-4 mb-2">Discovery Home</h3>
-                <p class="text-gray-600 text-sm">Featured sites and quick categories</p>
+                <h3 class="text-gray-800 font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-sm sm:text-base">Discovery Home</h3>
+                <p class="text-gray-600 text-xs sm:text-sm px-2">Featured sites and quick categories</p>
             </div>
 
             <!-- Search Page -->
-            <div class="text-center">
+            <div class="text-center grid-item">
                 <div class="phone-frame">
                     <iframe src="search.html" 
                             class="w-[393px] h-[852px] border-0 rounded-[2.5rem] shadow-2xl">
                     </iframe>
                 </div>
-                <h3 class="text-gray-800 font-semibold mt-4 mb-2">Search & Filter</h3>
-                <p class="text-gray-600 text-sm">Advanced search with smart filters</p>
+                <h3 class="text-gray-800 font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-sm sm:text-base">Search & Filter</h3>
+                <p class="text-gray-600 text-xs sm:text-sm px-2">Advanced search with smart filters</p>
             </div>
 
             <!-- Favorites Page -->
-            <div class="text-center">
+            <div class="text-center grid-item">
                 <div class="phone-frame">
                     <iframe src="favorites.html" 
                             class="w-[393px] h-[852px] border-0 rounded-[2.5rem] shadow-2xl">
                     </iframe>
                 </div>
-                <h3 class="text-gray-800 font-semibold mt-4 mb-2">My Favorites</h3>
-                <p class="text-gray-600 text-sm">Personal collection and visit tracking</p>
+                <h3 class="text-gray-800 font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-sm sm:text-base">My Favorites</h3>
+                <p class="text-gray-600 text-xs sm:text-sm px-2">Personal collection and visit tracking</p>
             </div>
 
             <!-- Profile Page -->
-            <div class="text-center">
+            <div class="text-center grid-item">
                 <div class="phone-frame">
                     <iframe src="profile.html" 
                             class="w-[393px] h-[852px] border-0 rounded-[2.5rem] shadow-2xl">
                     </iframe>
                 </div>
-                <h3 class="text-gray-800 font-semibold mt-4 mb-2">User Profile</h3>
-                <p class="text-gray-600 text-sm">Stats, achievements and settings</p>
+                <h3 class="text-gray-800 font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-sm sm:text-base">User Profile</h3>
+                <p class="text-gray-600 text-xs sm:text-sm px-2">Stats, achievements and settings</p>
             </div>
 
             <!-- Site Detail Page -->
-            <div class="text-center">
+            <div class="text-center grid-item">
                 <div class="phone-frame">
                     <iframe src="site-detail.html" 
                             class="w-[393px] h-[852px] border-0 rounded-[2.5rem] shadow-2xl">
                     </iframe>
                 </div>
-                <h3 class="text-gray-800 font-semibold mt-4 mb-2">Site Details</h3>
-                <p class="text-gray-600 text-sm">Comprehensive heritage site information</p>
+                <h3 class="text-gray-800 font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-sm sm:text-base">Site Details</h3>
+                <p class="text-gray-600 text-xs sm:text-sm px-2">Comprehensive heritage site information</p>
             </div>
 
             <!-- Categories Page -->
-            <div class="text-center">
+            <div class="text-center grid-item">
                 <div class="phone-frame">
                     <iframe src="categories.html" 
                             class="w-[393px] h-[852px] border-0 rounded-[2.5rem] shadow-2xl">
                     </iframe>
                 </div>
-                <h3 class="text-gray-800 font-semibold mt-4 mb-2">Category Browse</h3>
-                <p class="text-gray-600 text-sm">Explore by cultural, natural, mixed</p>
+                <h3 class="text-gray-800 font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-sm sm:text-base">Category Browse</h3>
+                <p class="text-gray-600 text-xs sm:text-sm px-2">Explore by cultural, natural, mixed</p>
             </div>
 
             <!-- Placeholder for future pages -->
-            <div class="text-center opacity-60">
+            <div class="text-center opacity-60 grid-item">
                 <div class="phone-frame">
                     <div class="w-[393px] h-[852px] bg-gray-200 dark:bg-gray-800 rounded-[2.5rem] shadow-2xl flex items-center justify-center">
                         <div class="text-center">
@@ -118,12 +146,12 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="text-gray-600 font-semibold mt-4 mb-2">Future Features</h3>
-                <p class="text-gray-500 text-sm">Map view, AR features, social sharing</p>
+                <h3 class="text-gray-600 font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-sm sm:text-base">Future Features</h3>
+                <p class="text-gray-500 text-xs sm:text-sm px-2">Map view, AR features, social sharing</p>
             </div>
 
             <!-- Dark Mode Placeholder -->
-            <div class="text-center opacity-60">
+            <div class="text-center opacity-60 grid-item">
                 <div class="phone-frame">
                     <div class="w-[393px] h-[852px] bg-gray-900 rounded-[2.5rem] shadow-2xl flex items-center justify-center">
                         <div class="text-center">
@@ -134,42 +162,42 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="text-gray-600 font-semibold mt-4 mb-2">Dark Theme</h3>
-                <p class="text-gray-500 text-sm">Full dark mode support throughout</p>
+                <h3 class="text-gray-600 font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-sm sm:text-base">Dark Theme</h3>
+                <p class="text-gray-500 text-xs sm:text-sm px-2">Full dark mode support throughout</p>
             </div>
         </div>
 
         <!-- Design Features -->
-        <div class="mt-16 text-center">
-            <h2 class="text-2xl font-bold text-gray-800 mb-8">Design Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-                    <div class="w-12 h-12 bg-blue-400 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-white text-xl">🎨</span>
+        <div class="mt-12 sm:mt-16 text-center">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6 sm:mb-8">Design Features</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto px-4">
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 sm:p-6">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-400 rounded-xl mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                        <span class="text-white text-lg sm:text-xl">🎨</span>
                     </div>
-                    <h3 class="text-gray-800 font-semibold mb-2">Elegant Minimalism</h3>
-                    <p class="text-gray-600 text-sm">Clean layouts with perfect balance of whitespace and content</p>
+                    <h3 class="text-gray-800 font-semibold mb-2 text-sm sm:text-base">Elegant Minimalism</h3>
+                    <p class="text-gray-600 text-xs sm:text-sm">Clean layouts with perfect balance of whitespace and content</p>
                 </div>
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-                    <div class="w-12 h-12 bg-purple-400 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-white text-xl">✨</span>
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 sm:p-6">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-purple-400 rounded-xl mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                        <span class="text-white text-lg sm:text-xl">✨</span>
                     </div>
-                    <h3 class="text-gray-800 font-semibold mb-2">Micro-interactions</h3>
-                    <p class="text-gray-600 text-sm">Delicate animations and hover effects for enhanced UX</p>
+                    <h3 class="text-gray-800 font-semibold mb-2 text-sm sm:text-base">Micro-interactions</h3>
+                    <p class="text-gray-600 text-xs sm:text-sm">Delicate animations and hover effects for enhanced UX</p>
                 </div>
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-                    <div class="w-12 h-12 bg-emerald-400 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-white text-xl">🌍</span>
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 sm:p-6">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-400 rounded-xl mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                        <span class="text-white text-lg sm:text-xl">🌍</span>
                     </div>
-                    <h3 class="text-gray-800 font-semibold mb-2">Global Ready</h3>
-                    <p class="text-gray-600 text-sm">Multi-language support with cultural sensitivity</p>
+                    <h3 class="text-gray-800 font-semibold mb-2 text-sm sm:text-base">Global Ready</h3>
+                    <p class="text-gray-600 text-xs sm:text-sm">Multi-language support with cultural sensitivity</p>
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
-        <div class="text-center mt-16 text-gray-600">
-            <p class="text-sm">World Heritage App UI Design • Built with Modern Web Technologies</p>
+        <div class="text-center mt-12 sm:mt-16 text-gray-600 px-4">
+            <p class="text-xs sm:text-sm">World Heritage App UI Design • Built with Modern Web Technologies</p>
             <p class="text-xs mt-2 opacity-75">© 2024 Heritage Explorer Design System</p>
         </div>
     </div>
