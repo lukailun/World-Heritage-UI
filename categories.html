@@ -6,6 +6,7 @@
     <title>World Heritage - Categories</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="shared-i18n.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -37,15 +38,15 @@
                 <button class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">
                     <i data-lucide="arrow-left" class="w-5 h-5 text-gray-600 dark:text-gray-300"></i>
                 </button>
-                <h1 class="text-2xl font-bold text-gray-800 dark:text-white">Cultural Heritage</h1>
+                <h1 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="cultural-heritage">Cultural Heritage</h1>
             </div>
             
             <!-- Category Stats -->
             <div class="bg-gradient-to-r from-amber-400 to-amber-500 rounded-2xl p-4">
                 <div class="flex items-center justify-between">
                     <div>
-                        <h2 class="text-white text-lg font-bold">Cultural Sites</h2>
-                        <p class="text-amber-100 text-sm">897 heritage sites worldwide</p>
+                        <h2 class="text-white text-lg font-bold" data-i18n="cultural-sites">Cultural Sites</h2>
+                        <p class="text-amber-100 text-sm" data-i18n="cultural-sites-count">897 heritage sites worldwide</p>
                     </div>
                     <i data-lucide="landmark" class="w-8 h-8 text-white/80"></i>
                 </div>

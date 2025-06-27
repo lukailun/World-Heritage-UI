@@ -6,6 +6,7 @@
     <title>World Heritage - Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="shared-i18n.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -34,7 +35,7 @@
         <!-- Header -->
         <div class="bg-gradient-to-br from-brand-500 to-brand-600 dark:from-brand-600 dark:to-brand-700 pt-12 pb-8 px-6">
             <div class="flex items-center justify-between mb-6">
-                <h1 class="text-white text-2xl font-bold">Profile</h1>
+                <h1 class="text-white text-2xl font-bold" data-i18n="profile">Profile</h1>
                 <button class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                     <i data-lucide="settings" class="w-5 h-5 text-white"></i>
                 </button>
@@ -67,14 +68,14 @@
                         <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
                     </div>
                     <p class="text-gray-800 dark:text-white text-lg font-bold">12</p>
-                    <p class="text-gray-500 dark:text-gray-400 text-xs">Visited</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs" data-i18n="visited">Visited</p>
                 </div>
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center shadow-sm">
                     <div class="w-12 h-12 bg-gradient-to-br from-red-400 to-red-500 rounded-xl mx-auto mb-2 flex items-center justify-center">
                         <i data-lucide="heart" class="w-6 h-6 text-white"></i>
                     </div>
                     <p class="text-gray-800 dark:text-white text-lg font-bold">8</p>
-                    <p class="text-gray-500 dark:text-gray-400 text-xs">Favorites</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs" data-i18n="favorites">Favorites</p>
                 </div>
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center shadow-sm">
                     <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl mx-auto mb-2 flex items-center justify-center">
@@ -138,19 +139,19 @@
             <div class="flex items-center justify-around">
                 <button class="flex flex-col items-center py-2 px-3">
                     <i data-lucide="compass" class="w-5 h-5 text-gray-400 mb-1"></i>
-                    <span class="text-xs text-gray-400">Discovery</span>
+                    <span class="text-xs text-gray-400" data-i18n="discovery">Discovery</span>
                 </button>
                 <button class="flex flex-col items-center py-2 px-3">
                     <i data-lucide="search" class="w-5 h-5 text-gray-400 mb-1"></i>
-                    <span class="text-xs text-gray-400">Search</span>
+                    <span class="text-xs text-gray-400" data-i18n="search">Search</span>
                 </button>
                 <button class="flex flex-col items-center py-2 px-3">
                     <i data-lucide="heart" class="w-5 h-5 text-gray-400 mb-1"></i>
-                    <span class="text-xs text-gray-400">Favorites</span>
+                    <span class="text-xs text-gray-400" data-i18n="favorites">Favorites</span>
                 </button>
                 <button class="flex flex-col items-center py-2 px-3 rounded-xl bg-brand-50 dark:bg-brand-900/30">
                     <i data-lucide="user" class="w-5 h-5 text-brand-600 dark:text-brand-400 mb-1"></i>
-                    <span class="text-xs text-brand-600 dark:text-brand-400 font-medium">Profile</span>
+                    <span class="text-xs text-brand-600 dark:text-brand-400 font-medium" data-i18n="profile">Profile</span>
                 </button>
             </div>
         </div>

@@ -6,6 +6,7 @@
     <title>World Heritage - Machu Picchu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="shared-i18n.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -56,10 +57,10 @@
                 <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h1 class="text-white text-xl font-bold mb-1">Machu Picchu</h1>
-                            <p class="text-white/80 text-sm">Peru • Cultural Heritage</p>
+                            <h1 class="text-white text-xl font-bold mb-1" data-i18n="machu-picchu">Machu Picchu</h1>
+                            <p class="text-white/80 text-sm" data-i18n="peru-cultural">Peru • Cultural Heritage</p>
                         </div>
-                        <span class="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        <span class="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-medium" data-i18n="cultural">
                             Cultural
                         </span>
                     </div>

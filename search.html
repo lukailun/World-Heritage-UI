@@ -6,6 +6,7 @@
     <title>World Heritage - Search</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="shared-i18n.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -36,7 +37,7 @@
             <div class="relative mb-4">
                 <div class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-2xl px-4 py-3">
                     <i data-lucide="search" class="w-5 h-5 text-gray-500 dark:text-gray-400 mr-3"></i>
-                    <input type="text" placeholder="Search world heritage sites..." 
+                    <input type="text" placeholder="Search world heritage sites..." data-i18n="search-world-heritage"
                            class="flex-1 bg-transparent text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 outline-none text-sm"
                            value="Great">
                     <button class="ml-2">
@@ -47,13 +48,13 @@
 
             <!-- Filter Chips -->
             <div class="flex space-x-2 mb-4">
-                <button class="px-3 py-1.5 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full text-xs font-medium">
+                <button class="px-3 py-1.5 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full text-xs font-medium" data-i18n="all-types">
                     All Types
                 </button>
-                <button class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs">
+                <button class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs" data-i18n="cultural">
                     Cultural
                 </button>
-                <button class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs">
+                <button class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs" data-i18n="natural">
                     Natural
                 </button>
                 <button class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs">
@@ -65,10 +66,10 @@
         <!-- Search Results -->
         <div class="flex-1 px-6 py-4 pb-24">
             <div class="flex items-center justify-between mb-4">
-                <p class="text-gray-600 dark:text-gray-300 text-sm">Found 12 results for "Great"</p>
+                <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="found-results">Found 12 results for "Great"</p>
                 <button class="flex items-center text-gray-500 dark:text-gray-400 text-xs">
                     <i data-lucide="arrow-up-down" class="w-3 h-3 mr-1"></i>
-                    Sort
+                    <span data-i18n="sort">Sort</span>
                 </button>
             </div>
 
@@ -82,10 +83,10 @@
                                  alt="Great Wall" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
-                            <h3 class="font-semibold text-gray-800 dark:text-white text-sm mb-1">Great Wall of China</h3>
-                            <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">China • Cultural • 1987</p>
+                            <h3 class="font-semibold text-gray-800 dark:text-white text-sm mb-1" data-i18n="great-wall">Great Wall of China</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs mb-2" data-i18n="china-1987">China • Cultural • 1987</p>
                             <div class="flex items-center">
-                                <span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full text-xs">
+                                <span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full text-xs" data-i18n="cultural">
                                     Cultural
                                 </span>
                                 <button class="ml-auto">
@@ -104,10 +105,10 @@
                                  alt="Great Barrier Reef" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
-                            <h3 class="font-semibold text-gray-800 dark:text-white text-sm mb-1">Great Barrier Reef</h3>
-                            <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Australia • Natural • 1981</p>
+                            <h3 class="font-semibold text-gray-800 dark:text-white text-sm mb-1" data-i18n="great-barrier-reef">Great Barrier Reef</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs mb-2" data-i18n="australia-1981">Australia • Natural • 1981</p>
                             <div class="flex items-center">
-                                <span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full text-xs">
+                                <span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full text-xs" data-i18n="natural">
                                     Natural
                                 </span>
                                 <button class="ml-auto">
@@ -169,19 +170,19 @@
             <div class="flex items-center justify-around">
                 <button class="flex flex-col items-center py-2 px-3">
                     <i data-lucide="compass" class="w-5 h-5 text-gray-400 mb-1"></i>
-                    <span class="text-xs text-gray-400">Discovery</span>
+                    <span class="text-xs text-gray-400" data-i18n="discovery">Discovery</span>
                 </button>
                 <button class="flex flex-col items-center py-2 px-3 rounded-xl bg-brand-50 dark:bg-brand-900/30">
                     <i data-lucide="search" class="w-5 h-5 text-brand-600 dark:text-brand-400 mb-1"></i>
-                    <span class="text-xs text-brand-600 dark:text-brand-400 font-medium">Search</span>
+                    <span class="text-xs text-brand-600 dark:text-brand-400 font-medium" data-i18n="search">Search</span>
                 </button>
                 <button class="flex flex-col items-center py-2 px-3">
                     <i data-lucide="heart" class="w-5 h-5 text-gray-400 mb-1"></i>
-                    <span class="text-xs text-gray-400">Favorites</span>
+                    <span class="text-xs text-gray-400" data-i18n="favorites">Favorites</span>
                 </button>
                 <button class="flex flex-col items-center py-2 px-3">
                     <i data-lucide="user" class="w-5 h-5 text-gray-400 mb-1"></i>
-                    <span class="text-xs text-gray-400">Profile</span>
+                    <span class="text-xs text-gray-400" data-i18n="profile">Profile</span>
                 </button>
             </div>
         </div>

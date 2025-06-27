@@ -321,6 +321,20 @@
             currentLang = currentLang === 'en' ? 'zh' : 'en';
             updateLanguage(currentLang);
             localStorage.setItem('preferred-language', currentLang);
+            
+            // Send language change message to all iframes
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                try {
+                    iframe.contentWindow.postMessage({
+                        type: 'LANGUAGE_CHANGE',
+                        language: currentLang
+                    }, '*');
+                } catch (e) {
+                    // Handle cross-origin issues gracefully
+                    console.log('Could not send message to iframe:', e);
+                }
+            });
         }
 
         // Initialize language on page load
@@ -330,6 +344,21 @@
             // Add click event to language toggle button
             const toggleButton = document.getElementById('languageToggle');
             toggleButton.addEventListener('click', toggleLanguage);
+            
+            // Send initial language to iframes when they load
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                iframe.addEventListener('load', () => {
+                    try {
+                        iframe.contentWindow.postMessage({
+                            type: 'LANGUAGE_CHANGE',
+                            language: currentLang
+                        }, '*');
+                    } catch (e) {
+                        console.log('Could not send initial language to iframe:', e);
+                    }
+                });
+            });
         });
     </script>
 </body>
