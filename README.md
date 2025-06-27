@@ -1,6 +1,6 @@
 # World Heritage UI
 
-A "World Heritage" App generated using Claude Sonnet 4.
+A "World Heritage" App design draft generated using Claude Sonnet 4, with prompts included.
 
 ## Model
 

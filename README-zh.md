@@ -1,6 +1,6 @@
 # 世界遗产设计稿
 
-使用 Claude Sonnet 4 生成的“世界遗产” App。
+使用 Claude Sonnet 4 生成的“世界遗产” App 设计稿，附带提示词。
 
 ## 模型
 
