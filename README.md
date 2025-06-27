@@ -14,11 +14,11 @@ English | [简体中文](./README-zh.md)
   <img src="./screenshots/en.png" alt="English Version">
 </div>
 
-## Model
+## 🤖 Model
 
 Claude Sonnet 4
 
-## Prompt
+## 💬 Prompt
 
 ```
 # Role

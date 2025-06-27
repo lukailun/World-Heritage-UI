@@ -14,11 +14,11 @@
   <img src="./screenshots/zh.png" alt="en">
 </div>
 
-## 模型
+## 🤖 模型
 
 Claude Sonnet 4
 
-## 提示词
+## 💬 提示词
 
 ```
 #角色
