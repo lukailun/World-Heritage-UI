@@ -4,6 +4,12 @@
 
 [English](./README.md) | 简体中文
 
+## 预览
+
+<div align="center">
+  <img src="./screenshots/zh.png" alt="en">
+</div>
+
 ## 模型
 
 Claude Sonnet 4

@@ -4,6 +4,12 @@ A "World Heritage" App design draft generated using Claude Sonnet 4, with prompt
 
 English | [简体中文](./README-zh.md)
 
+## Preview
+
+<div align="center">
+  <img src="./screenshots/en.png" alt="en">
+</div>
+
 ## Model
 
 Claude Sonnet 4
