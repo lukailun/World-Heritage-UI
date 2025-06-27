@@ -1,4 +1,4 @@
-# World Heritage App Design
+# World Heritage UI
 
 ## Model
 
