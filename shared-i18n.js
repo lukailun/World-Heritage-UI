@@ -284,6 +284,7 @@ class SharedI18n {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    window.sharedI18n = new SharedI18n();
-}); 
+// Don't auto-create instance, let each page create its own
+// document.addEventListener('DOMContentLoaded', () => {
+//     window.sharedI18n = new SharedI18n();
+// }); 

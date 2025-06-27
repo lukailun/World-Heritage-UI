@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Heritage App - UI Design Showcase</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <style>
         body {
-            background: white;
             min-height: 100vh;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
@@ -52,15 +56,6 @@
         
         body {
             transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        
-        .dark body {
-            background: #111827;
-            color: #f9fafb;
-        }
-        
-        .dark .max-w-7xl {
-            background: #111827;
         }
     </style>
 </head>
@@ -201,9 +196,14 @@
     <script src="shared-i18n.js"></script>
     <script>
         let i18n;
+        let isDarkMode = localStorage.getItem('dark-mode') === 'true';
 
         document.addEventListener('DOMContentLoaded', function() {
             i18n = new SharedI18n();
+            
+            // Apply initial dark mode state
+            updateDarkMode();
+            updateDarkModeIcon();
             
             const languageToggleButton = document.getElementById('languageToggle');
             languageToggleButton.addEventListener('click', toggleLanguage);
@@ -221,7 +221,7 @@
                         }, '*');
                         iframe.contentWindow.postMessage({
                             type: 'DARK_MODE_CHANGE',
-                            isDarkMode: i18n.isDarkMode
+                            isDarkMode: isDarkMode
                         }, '*');
                     } catch (e) {
                         console.log('Could not send initial settings to iframe:', e);
@@ -249,21 +249,44 @@
         }
         
         function toggleDarkMode() {
-            i18n.isDarkMode = !i18n.isDarkMode;
-            i18n.updateDarkMode();
-            localStorage.setItem('dark-mode', i18n.isDarkMode);
+            isDarkMode = !isDarkMode;
+            updateDarkMode();
+            updateDarkModeIcon();
+            localStorage.setItem('dark-mode', isDarkMode);
             
             const iframes = document.querySelectorAll('iframe');
             iframes.forEach(iframe => {
                 try {
                     iframe.contentWindow.postMessage({
                         type: 'DARK_MODE_CHANGE',
-                        isDarkMode: i18n.isDarkMode
+                        isDarkMode: isDarkMode
                     }, '*');
                 } catch (e) {
                     console.log('Could not send dark mode message to iframe:', e);
                 }
             });
+        }
+        
+        function updateDarkMode() {
+            const html = document.documentElement;
+            if (isDarkMode) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+        
+        function updateDarkModeIcon() {
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            
+            if (isDarkMode) {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
         }
     </script>
 
