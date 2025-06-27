@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Heritage - Discovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 font-sans">
+    <div class="w-[393px] h-[852px] mx-auto bg-white dark:bg-gray-900 shadow-2xl rounded-[2.5rem] border-4 border-gray-300 dark:border-gray-700 overflow-hidden relative">
+        
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-brand-500 to-brand-600 dark:from-brand-600 dark:to-brand-700 pt-12 pb-6 px-6">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h1 class="text-white text-2xl font-bold">World Heritage</h1>
+                    <p class="text-brand-100 text-sm">Discover UNESCO Sites</p>
+                </div>
+                <button class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <i data-lucide="bell" class="w-5 h-5 text-white"></i>
+                </button>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="relative">
+                <div class="flex items-center bg-white/20 backdrop-blur-sm rounded-2xl px-4 py-3">
+                    <i data-lucide="search" class="w-5 h-5 text-white/80 mr-3"></i>
+                    <input type="text" placeholder="Search heritage sites..." 
+                           class="flex-1 bg-transparent text-white placeholder-white/70 outline-none text-sm">
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flex-1 px-6 py-6 pb-24">
+            <!-- Quick Categories -->
+            <div class="mb-6">
+                <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-3">Explore by Type</h2>
+                <div class="flex space-x-3">
+                    <div class="flex-1 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-2xl p-4 text-center">
+                        <i data-lucide="tree-pine" class="w-6 h-6 text-white mx-auto mb-2"></i>
+                        <p class="text-white text-sm font-medium">Natural</p>
+                        <p class="text-emerald-100 text-xs">218 sites</p>
+                    </div>
+                    <div class="flex-1 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl p-4 text-center">
+                        <i data-lucide="landmark" class="w-6 h-6 text-white mx-auto mb-2"></i>
+                        <p class="text-white text-sm font-medium">Cultural</p>
+                        <p class="text-amber-100 text-xs">897 sites</p>
+                    </div>
+                    <div class="flex-1 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl p-4 text-center">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-white mx-auto mb-2"></i>
+                        <p class="text-white text-sm font-medium">Mixed</p>
+                        <p class="text-purple-100 text-xs">39 sites</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Sites -->
+            <div>
+                <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-3">Featured Sites</h2>
+                
+                <!-- Site Card 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg mb-4 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-r from-blue-400 to-blue-600 relative">
+                        <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a2e?w=400&h=200&fit=crop" 
+                             alt="Machu Picchu" class="w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                            <span class="text-white text-xs font-medium">Cultural</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 dark:text-white mb-1">Machu Picchu</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">Peru • Inscribed 1983</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs leading-relaxed">
+                            An extraordinary example of landscape architecture that harmonizes with nature.
+                        </p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-gray-400 mr-1"></i>
+                                <span class="text-gray-500 dark:text-gray-400 text-xs">Cusco Region</span>
+                            </div>
+                            <button class="w-8 h-8 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
+                                <i data-lucide="heart" class="w-4 h-4 text-gray-600 dark:text-gray-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Site Card 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg mb-4 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-r from-green-400 to-green-600 relative">
+                        <img src="https://images.unsplash.com/photo-1513415277979-76326b9bf711?w=400&h=200&fit=crop" 
+                             alt="Great Wall" class="w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                            <span class="text-white text-xs font-medium">Cultural</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 dark:text-white mb-1">Great Wall of China</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">China • Inscribed 1987</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs leading-relaxed">
+                            A magnificent architectural feat spanning thousands of kilometers.
+                        </p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-gray-400 mr-1"></i>
+                                <span class="text-gray-500 dark:text-gray-400 text-xs">Multiple Provinces</span>
+                            </div>
+                            <button class="w-8 h-8 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
+                                <i data-lucide="heart" class="w-4 h-4 text-gray-600 dark:text-gray-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 px-6 py-3">
+            <div class="flex items-center justify-around">
+                <button class="flex flex-col items-center py-2 px-3 rounded-xl bg-brand-50 dark:bg-brand-900/30">
+                    <i data-lucide="compass" class="w-5 h-5 text-brand-600 dark:text-brand-400 mb-1"></i>
+                    <span class="text-xs text-brand-600 dark:text-brand-400 font-medium">Discovery</span>
+                </button>
+                <button class="flex flex-col items-center py-2 px-3">
+                    <i data-lucide="search" class="w-5 h-5 text-gray-400 mb-1"></i>
+                    <span class="text-xs text-gray-400">Search</span>
+                </button>
+                <button class="flex flex-col items-center py-2 px-3">
+                    <i data-lucide="heart" class="w-5 h-5 text-gray-400 mb-1"></i>
+                    <span class="text-xs text-gray-400">Favorites</span>
+                </button>
+                <button class="flex flex-col items-center py-2 px-3">
+                    <i data-lucide="user" class="w-5 h-5 text-gray-400 mb-1"></i>
+                    <span class="text-xs text-gray-400">Profile</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 

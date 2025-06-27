@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Heritage - Machu Picchu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 font-sans">
+    <div class="w-[393px] h-[852px] mx-auto bg-white dark:bg-gray-900 shadow-2xl rounded-[2.5rem] border-4 border-gray-300 dark:border-gray-700 overflow-hidden relative">
+        
+        <!-- Header Image -->
+        <div class="relative h-64">
+            <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a2e?w=400&h=300&fit=crop" 
+                 alt="Machu Picchu" class="w-full h-full object-cover">
+            
+            <!-- Navigation -->
+            <div class="absolute top-12 left-6 right-6 flex items-center justify-between">
+                <button class="w-10 h-10 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <i data-lucide="arrow-left" class="w-5 h-5 text-white"></i>
+                </button>
+                <div class="flex space-x-2">
+                    <button class="w-10 h-10 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <i data-lucide="share" class="w-5 h-5 text-white"></i>
+                    </button>
+                    <button class="w-10 h-10 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <i data-lucide="heart" class="w-5 h-5 text-red-500"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Floating Info -->
+            <div class="absolute bottom-4 left-6 right-6">
+                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h1 class="text-white text-xl font-bold mb-1">Machu Picchu</h1>
+                            <p class="text-white/80 text-sm">Peru • Cultural Heritage</p>
+                        </div>
+                        <span class="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            Cultural
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flex-1 px-6 py-6 overflow-y-auto">
+            <!-- Quick Info -->
+            <div class="grid grid-cols-3 gap-3 mb-6">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-3 text-center shadow-sm">
+                    <i data-lucide="calendar" class="w-5 h-5 text-brand-500 mx-auto mb-1"></i>
+                    <p class="text-gray-800 dark:text-white text-sm font-medium">1983</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs">Inscribed</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-3 text-center shadow-sm">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-brand-500 mx-auto mb-1"></i>
+                    <p class="text-gray-800 dark:text-white text-sm font-medium">2,430m</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs">Altitude</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-3 text-center shadow-sm">
+                    <i data-lucide="star" class="w-5 h-5 text-brand-500 mx-auto mb-1"></i>
+                    <p class="text-gray-800 dark:text-white text-sm font-medium">4.9</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs">Rating</p>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-6">
+                <h2 class="text-gray-800 dark:text-white font-semibold text-lg mb-3">About this site</h2>
+                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                    Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru. 
+                    It is situated on a mountain ridge at 2,430 meters above sea level.
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                    Built around 1450 AD, this archaeological wonder demonstrates the extraordinary architectural 
+                    and engineering skills of the Inca civilization, harmoniously integrated with the natural landscape.
+                </p>
+            </div>
+
+            <!-- Criteria -->
+            <div class="mb-6">
+                <h3 class="text-gray-800 dark:text-white font-semibold mb-3">Inscription Criteria</h3>
+                <div class="space-y-2">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-3 shadow-sm border border-gray-100 dark:border-gray-700">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-brand-100 dark:bg-brand-900/30 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                <span class="text-brand-600 dark:text-brand-400 text-xs font-bold">i</span>
+                            </div>
+                            <div>
+                                <p class="text-gray-800 dark:text-white text-sm font-medium mb-1">Criterion (i)</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-xs">
+                                    Represents a masterpiece of human creative genius
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-3 shadow-sm border border-gray-100 dark:border-gray-700">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-brand-100 dark:bg-brand-900/30 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                <span class="text-brand-600 dark:text-brand-400 text-xs font-bold">iii</span>
+                            </div>
+                            <div>
+                                <p class="text-gray-800 dark:text-white text-sm font-medium mb-1">Criterion (iii)</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-xs">
+                                    Bears unique testimony to a cultural tradition
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="mb-6">
+                <h3 class="text-gray-800 dark:text-white font-semibold mb-3">Location</h3>
+                <div class="bg-gradient-to-r from-green-400 to-green-500 rounded-2xl h-32 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-white font-medium">Cusco Region, Peru</p>
+                                <p class="text-white/80 text-sm">13°09′47″S 72°32′44″W</p>
+                            </div>
+                            <button class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                <span class="text-white text-xs">View Map</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex space-x-3 pb-6">
+                <button class="flex-1 bg-brand-500 text-white rounded-2xl py-4 font-medium">
+                    Plan Visit
+                </button>
+                <button class="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center">
+                    <i data-lucide="camera" class="w-6 h-6 text-gray-600 dark:text-gray-300"></i>
+                </button>
+                <button class="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center">
+                    <i data-lucide="bookmark" class="w-6 h-6 text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 

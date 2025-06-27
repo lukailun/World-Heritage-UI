@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Heritage - Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 font-sans">
+    <div class="w-[393px] h-[852px] mx-auto bg-white dark:bg-gray-900 shadow-2xl rounded-[2.5rem] border-4 border-gray-300 dark:border-gray-700 overflow-hidden relative">
+        
+        <!-- Header -->
+        <div class="bg-white dark:bg-gray-800 pt-12 pb-4 px-6 border-b border-gray-200 dark:border-gray-700">
+            <div class="relative mb-4">
+                <div class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-2xl px-4 py-3">
+                    <i data-lucide="search" class="w-5 h-5 text-gray-500 dark:text-gray-400 mr-3"></i>
+                    <input type="text" placeholder="Search world heritage sites..." 
+                           class="flex-1 bg-transparent text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 outline-none text-sm"
+                           value="Great">
+                    <button class="ml-2">
+                        <i data-lucide="x" class="w-4 h-4 text-gray-400"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Chips -->
+            <div class="flex space-x-2 mb-4">
+                <button class="px-3 py-1.5 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full text-xs font-medium">
+                    All Types
+                </button>
+                <button class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs">
+                    Cultural
+                </button>
+                <button class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs">
+                    Natural
+                </button>
+                <button class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs">
+                    <i data-lucide="filter" class="w-3 h-3"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Results -->
+        <div class="flex-1 px-6 py-4 pb-24">
+            <div class="flex items-center justify-between mb-4">
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Found 12 results for "Great"</p>
+                <button class="flex items-center text-gray-500 dark:text-gray-400 text-xs">
+                    <i data-lucide="arrow-up-down" class="w-3 h-3 mr-1"></i>
+                    Sort
+                </button>
+            </div>
+
+            <!-- Result Items -->
+            <div class="space-y-3">
+                <!-- Result 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-4">
+                    <div class="flex">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 rounded-xl mr-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1513415277979-76326b9bf711?w=100&h=100&fit=crop" 
+                                 alt="Great Wall" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800 dark:text-white text-sm mb-1">Great Wall of China</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">China • Cultural • 1987</p>
+                            <div class="flex items-center">
+                                <span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full text-xs">
+                                    Cultural
+                                </span>
+                                <button class="ml-auto">
+                                    <i data-lucide="heart" class="w-4 h-4 text-gray-400"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-4">
+                    <div class="flex">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl mr-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=100&h=100&fit=crop" 
+                                 alt="Great Barrier Reef" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800 dark:text-white text-sm mb-1">Great Barrier Reef</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Australia • Natural • 1981</p>
+                            <div class="flex items-center">
+                                <span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full text-xs">
+                                    Natural
+                                </span>
+                                <button class="ml-auto">
+                                    <i data-lucide="heart" class="w-4 h-4 text-red-500"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-4">
+                    <div class="flex">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl mr-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=100&h=100&fit=crop" 
+                                 alt="Great Mosque" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800 dark:text-white text-sm mb-1">Great Mosque of Djenné</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Mali • Cultural • 1988</p>
+                            <div class="flex items-center">
+                                <span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full text-xs">
+                                    Cultural
+                                </span>
+                                <button class="ml-auto">
+                                    <i data-lucide="heart" class="w-4 h-4 text-gray-400"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-4">
+                    <div class="flex">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-xl mr-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563713212885-67dd5ac87fd0?w=100&h=100&fit=crop" 
+                                 alt="Great Zimbabwe" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800 dark:text-white text-sm mb-1">Great Zimbabwe</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs mb-2">Zimbabwe • Cultural • 1986</p>
+                            <div class="flex items-center">
+                                <span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full text-xs">
+                                    Cultural
+                                </span>
+                                <button class="ml-auto">
+                                    <i data-lucide="heart" class="w-4 h-4 text-gray-400"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 px-6 py-3">
+            <div class="flex items-center justify-around">
+                <button class="flex flex-col items-center py-2 px-3">
+                    <i data-lucide="compass" class="w-5 h-5 text-gray-400 mb-1"></i>
+                    <span class="text-xs text-gray-400">Discovery</span>
+                </button>
+                <button class="flex flex-col items-center py-2 px-3 rounded-xl bg-brand-50 dark:bg-brand-900/30">
+                    <i data-lucide="search" class="w-5 h-5 text-brand-600 dark:text-brand-400 mb-1"></i>
+                    <span class="text-xs text-brand-600 dark:text-brand-400 font-medium">Search</span>
+                </button>
+                <button class="flex flex-col items-center py-2 px-3">
+                    <i data-lucide="heart" class="w-5 h-5 text-gray-400 mb-1"></i>
+                    <span class="text-xs text-gray-400">Favorites</span>
+                </button>
+                <button class="flex flex-col items-center py-2 px-3">
+                    <i data-lucide="user" class="w-5 h-5 text-gray-400 mb-1"></i>
+                    <span class="text-xs text-gray-400">Profile</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 
