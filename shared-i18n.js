@@ -1,9 +1,5 @@
-// Shared Internationalization System for World Heritage App
-// This file provides language switching functionality for all pages
-
 const sharedTranslations = {
     en: {
-        // Common UI elements
         'search': 'Search',
         'search-placeholder': 'Search heritage sites...',
         'search-world-heritage': 'Search world heritage sites...',
@@ -17,7 +13,6 @@ const sharedTranslations = {
         'filter': 'Filter',
         'all-types': 'All Types',
         
-        // Discovery page
         'world-heritage': 'World Heritage',
         'discover-unesco': 'Discover UNESCO Sites',
         'explore-by-type': 'Explore by Type',
@@ -26,7 +21,6 @@ const sharedTranslations = {
         'sites-count-cultural': '897 sites',
         'sites-count-mixed': '39 sites',
         
-        // Site details
         'machu-picchu': 'Machu Picchu',
         'peru-1983': 'Peru • Inscribed 1983',
         'machu-picchu-desc': 'An extraordinary example of landscape architecture that harmonizes with nature.',
@@ -46,10 +40,8 @@ const sharedTranslations = {
         'great-zimbabwe': 'Great Zimbabwe',
         'zimbabwe-1986': 'Zimbabwe • Cultural • 1986',
         
-        // Search results
         'found-results': 'Found 12 results for "Great"',
         
-        // Categories
         'browse-categories': 'Browse Categories',
         'cultural-heritage': 'Cultural Heritage',
         'cultural-desc': 'Human-made wonders and traditions',
@@ -58,7 +50,6 @@ const sharedTranslations = {
         'mixed-heritage': 'Mixed Heritage',
         'mixed-desc': 'Cultural and natural significance',
         
-        // Profile
         'my-profile': 'My Profile',
         'sites-visited': 'Sites Visited',
         'achievements': 'Achievements',
@@ -68,7 +59,6 @@ const sharedTranslations = {
         'privacy': 'Privacy',
         'about': 'About',
         
-        // Site detail page
         'overview': 'Overview',
         'location': 'Location',
         'history': 'History',
@@ -77,20 +67,45 @@ const sharedTranslations = {
         'share': 'Share',
         'plan-visit': 'Plan Visit',
         
-        // Favorites
         'my-favorites': 'My Favorites',
         'visited': 'Visited',
         'want-to-visit': 'Want to Visit',
         'clear-all': 'Clear All',
         'total-saved': 'Total Saved',
         
-        // Additional content
         'peru-cultural': 'Peru • Cultural Heritage',
         'cultural-sites': 'Cultural Sites',
-        'cultural-sites-count': '897 heritage sites worldwide'
+        'cultural-sites-count': '897 heritage sites worldwide',
+        
+        'current-lang': 'EN',
+        'main-title': 'World Heritage App',
+        'main-subtitle': 'Elegant minimalist design for UNESCO World Heritage exploration',
+        'feature-responsive': 'Responsive Design',
+        'feature-dark': 'Dark Mode Support',
+        'feature-i18n': 'Internationalization',
+        'page-discovery-title': 'Discovery Home',
+        'page-discovery-desc': 'Featured sites and quick categories',
+        'page-search-title': 'Search & Filter',
+        'page-search-desc': 'Advanced search with smart filters',
+        'page-favorites-title': 'My Favorites',
+        'page-favorites-desc': 'Personal collection and visit tracking',
+        'page-profile-title': 'User Profile',
+        'page-profile-desc': 'Stats, achievements and settings',
+        'page-detail-title': 'Site Details',
+        'page-detail-desc': 'Comprehensive heritage site information',
+        'page-categories-title': 'Category Browse',
+        'page-categories-desc': 'Explore by cultural, natural, mixed',
+        'design-features-title': 'Design Features',
+        'feature-elegant-title': 'Elegant Minimalism',
+        'feature-elegant-desc': 'Clean layouts with perfect balance of whitespace and content',
+        'feature-micro-title': 'Micro-interactions',
+        'feature-micro-desc': 'Delicate animations and hover effects for enhanced UX',
+        'feature-global-title': 'Global Ready',
+        'feature-global-desc': 'Multi-language support with cultural sensitivity',
+        'footer-text': 'World Heritage App UI Design • Built with Modern Web Technologies',
+        'footer-copyright': '© 2024 Heritage Explorer Design System'
     },
     zh: {
-        // Common UI elements
         'search': '搜索',
         'search-placeholder': '搜索遗产地...',
         'search-world-heritage': '搜索世界遗产地...',
@@ -104,7 +119,6 @@ const sharedTranslations = {
         'filter': '筛选',
         'all-types': '所有类型',
         
-        // Discovery page
         'world-heritage': '世界遗产',
         'discover-unesco': '发现联合国教科文组织遗产地',
         'explore-by-type': '按类型探索',
@@ -113,7 +127,6 @@ const sharedTranslations = {
         'sites-count-cultural': '897个遗产地',
         'sites-count-mixed': '39个遗产地',
         
-        // Site details
         'machu-picchu': '马丘比丘',
         'peru-1983': '秘鲁 • 1983年列入',
         'machu-picchu-desc': '与自然和谐统一的非凡景观建筑典范。',
@@ -133,10 +146,8 @@ const sharedTranslations = {
         'great-zimbabwe': '大津巴布韦',
         'zimbabwe-1986': '津巴布韦 • 文化 • 1986年',
         
-        // Search results
         'found-results': '为"Great"找到12个结果',
         
-        // Categories
         'browse-categories': '浏览分类',
         'cultural-heritage': '文化遗产',
         'cultural-desc': '人类创造的奇迹和传统',
@@ -145,7 +156,6 @@ const sharedTranslations = {
         'mixed-heritage': '混合遗产',
         'mixed-desc': '文化和自然意义',
         
-        // Profile
         'my-profile': '我的资料',
         'sites-visited': '已访问遗产地',
         'achievements': '成就',
@@ -155,7 +165,6 @@ const sharedTranslations = {
         'privacy': '隐私',
         'about': '关于',
         
-        // Site detail page
         'overview': '概述',
         'location': '位置',
         'history': '历史',
@@ -164,43 +173,71 @@ const sharedTranslations = {
         'share': '分享',
         'plan-visit': '计划参观',
         
-        // Favorites
         'my-favorites': '我的收藏',
         'visited': '已访问',
         'want-to-visit': '想要访问',
         'clear-all': '清除全部',
         'total-saved': '总收藏',
         
-        // Additional content
         'peru-cultural': '秘鲁 • 文化遗产',
         'cultural-sites': '文化遗产地',
-        'cultural-sites-count': '全球897个遗产地'
+        'cultural-sites-count': '全球897个遗产地',
+        
+        'current-lang': '中文',
+        'main-title': '世界遗产应用',
+        'main-subtitle': '联合国教科文组织世界遗产探索的优雅极简设计',
+        'feature-responsive': '响应式设计',
+        'feature-dark': '深色模式支持',
+        'feature-i18n': '国际化',
+        'page-discovery-title': '发现首页',
+        'page-discovery-desc': '精选遗产地和快速分类',
+        'page-search-title': '搜索筛选',
+        'page-search-desc': '智能过滤器的高级搜索',
+        'page-favorites-title': '我的收藏',
+        'page-favorites-desc': '个人收藏和访问记录',
+        'page-profile-title': '用户资料',
+        'page-profile-desc': '统计、成就和设置',
+        'page-detail-title': '遗产详情',
+        'page-detail-desc': '全面的遗产地信息',
+        'page-categories-title': '分类浏览',
+        'page-categories-desc': '按文化、自然、混合类型探索',
+        'design-features-title': '设计特色',
+        'feature-elegant-title': '优雅极简',
+        'feature-elegant-desc': '完美平衡空白和内容的简洁布局',
+        'feature-micro-title': '微交互',
+        'feature-micro-desc': '精细的动画和悬停效果增强用户体验',
+        'feature-global-title': '全球化',
+        'feature-global-desc': '具有文化敏感性的多语言支持',
+        'footer-text': '世界遗产应用UI设计 • 采用现代网络技术构建',
+        'footer-copyright': '© 2024 遗产探索者设计系统'
     }
 };
 
-// Shared internationalization functionality
 class SharedI18n {
     constructor() {
         this.currentLang = localStorage.getItem('preferred-language') || 'en';
+        this.isDarkMode = localStorage.getItem('dark-mode') === 'true' || false;
         this.init();
     }
     
     init() {
-        // Listen for language change messages from parent window
         window.addEventListener('message', (event) => {
             if (event.data.type === 'LANGUAGE_CHANGE') {
                 this.currentLang = event.data.language;
                 this.updateLanguage();
+            } else if (event.data.type === 'DARK_MODE_CHANGE') {
+                this.isDarkMode = event.data.isDarkMode;
+                this.updateDarkMode();
             }
         });
         
-        // Initial language update
         this.updateLanguage();
+        this.updateDarkMode();
     }
     
     updateLanguage() {
-        const elements = document.querySelectorAll('[data-i18n]');
-        elements.forEach(element => {
+        const elementsI18n = document.querySelectorAll('[data-i18n]');
+        elementsI18n.forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (sharedTranslations[this.currentLang] && sharedTranslations[this.currentLang][key]) {
                 if (element.tagName === 'INPUT' && element.placeholder !== undefined) {
@@ -211,8 +248,33 @@ class SharedI18n {
             }
         });
         
-        // Update HTML lang attribute
+        const elementsKey = document.querySelectorAll('[data-key]');
+        elementsKey.forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (sharedTranslations[this.currentLang] && sharedTranslations[this.currentLang][key]) {
+                element.innerHTML = sharedTranslations[this.currentLang][key];
+            }
+        });
+        
         document.documentElement.lang = this.currentLang === 'zh' ? 'zh-CN' : 'en';
+        
+        if (document.title.includes('World Heritage App') || document.title.includes('世界遗产应用')) {
+            document.title = this.currentLang === 'zh' ? 
+                '世界遗产应用 - UI设计展示' : 
+                'World Heritage App - UI Design Showcase';
+        }
+    }
+    
+    updateDarkMode() {
+        const html = document.documentElement;
+        
+        if (this.isDarkMode) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        
+        localStorage.setItem('dark-mode', this.isDarkMode);
     }
     
     getText(key) {
@@ -222,7 +284,6 @@ class SharedI18n {
     }
 }
 
-// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     window.sharedI18n = new SharedI18n();
 }); 
