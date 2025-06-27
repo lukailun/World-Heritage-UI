@@ -2,6 +2,8 @@
 
 使用 Claude Sonnet 4 生成的“世界遗产” App 设计稿，附带提示词。
 
+[English](./README.md) | 简体中文
+
 ## 模型
 
 Claude Sonnet 4
